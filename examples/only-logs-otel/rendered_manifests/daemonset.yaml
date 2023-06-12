@@ -29,7 +29,7 @@ spec:
         app: splunk-otel-collector
         release: default
       annotations:
-        checksum/config: d32e9078997f4ee6d09e4e9211d7354b97ddad1827951a26b815472ec353d7ad
+        checksum/config: 6d7cb0c03a52dac4994d30bdc21d069905cd6b648c4986c32f7b0ec6420a20f1
         kubectl.kubernetes.io/default-container: otel-collector
     spec:
       hostNetwork: true

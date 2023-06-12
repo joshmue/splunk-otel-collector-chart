@@ -24,7 +24,7 @@ extensions:
 
 receivers:
   {{- include "splunk-otel-collector.otelReceivers" . | nindent 2 }}
-  {{- if (eq (include "splunk-otel-collector.logsEnabled" .) "true") }}
+  {{- if and (eq (include "splunk-otel-collector.logsEnabled" .) "true") (eq .Values.logsEngine "fluentd") }}
   fluentforward:
     endpoint: 0.0.0.0:8006
   {{- end }}
